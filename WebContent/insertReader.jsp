@@ -9,19 +9,32 @@
 <body>
 
 <form action="reader">
-        <h2> Insert Reader</h2>
-        Firstname:
-        <input type="text" name="fname"><br>
-        Address:
-        <input type="text" name="addrs"><br>
-        Type:
-        <select name="rtype">
+    <fieldset>
+    <legend align="center">INSERT READER</legend>
+     <table align="center">
+        <tr>
+        <td align="left">Firstname:</td>
+        <td align="center"><input type="text" name="fname"></td>
+        </tr>
+        <tr>
+        <td align="left">Address:</td>
+        <td align="center"><input type="text" name="addrs"></td>
+        </tr>
+     	<tr>
+        <td align="left">Type:</td>
+        <td align="center"><select>
               <option value="student">Student</option>
               <option value="staff">Staff</option>
-              <option value="senior">Senior citizen</option>
-        </select><br>
+              <option value="senior citizen">Senior Citizen</option>
+        </select></td>
+        </tr>
+        <tr>
+        <td></td>
         <input type="hidden" name="operation" value="insert">
-        <input type="submit" value="Submit">
+        <td align="center"><input type="submit" value="Submit"></td>
+        </tr>
+        </table>
+        </fieldset>
     </form>
 
 </body>

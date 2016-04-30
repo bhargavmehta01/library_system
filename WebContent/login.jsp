@@ -8,28 +8,55 @@
 <h1 align="center">LIBRARY MANAGEMENT SYSTEM</h1>
 </head>
 <body>
-<h2> Reader's login</h2>
-	<form action="login">
-        Username:
-        <input type="text" name="uname"><br>
-        Password:
-        <input type="password" name="pswd"><br>
-        <input type="hidden" name="auth" value="reader">
-        <input type="submit" value="Submit">
-    </form>
-    <br>
-    <br> 
-    <br>
-    <br>
-    <br>    
     <form action="login">
-        <h2> Admin's login</h2>
-        Username:
-        <input type="text" name="uname"><br>
-        Password:
-        <input type="password" name="pswd"><br>
+ <fieldset>
+ <legend align="center">READER'S LOGIN</legend>
+<table  align="center">
+   		
+        <tr>
+            <td align="center">Username:</td>
+         	<td align="center"><input type="text" name="uname"></td>
+        </br>
+        <tr>
+        	<td align="center">Password:</td>
+        	<td align="center"><input type="password" name="pswd"><br></td>
+        </tr>
+        	</br>
+        <tr>
+        	<td align="center"></td>
+            <input type="hidden" name="auth" value="reader">
+       		<td align="center"> <input type="submit" value="Submit"></td>
+       	</tr>
+       		
+       		
+       		</table>
+       		</fieldset>
+    </form> 
+    </br>
+    </br>
+    </br>
+    <form action="login">
+     <fieldset>
+      <legend align="center">ADMIN'S LOGIN</legend>
+       <table align="center">
+        </br>
+        <tr>
+        <td  align="center">Username:</td>
+        <td align="center"><input type="text" name="uname"></td>
+        </tr>
+        </br>
+        <tr>
+        <td align="center">Password:</td>
+        <td align="center"><input type="password" name="pswd"></td>
+        </tr>
+        </br>
+        <tr>
+        <td align="center"></td>
         <input type="hidden" name="auth" value="admin">
-        <input type="submit" value="Submit">
+        <td align="center"><input type="submit" value="Submit"></td>
+ 		</tr>   
+       </table>
+     </fieldset>
     </form>
 </body>
 </html>
