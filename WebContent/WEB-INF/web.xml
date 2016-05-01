@@ -36,4 +36,33 @@
   <servlet-name>publisher</servlet-name>
   <url-pattern>/publisher</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>document</servlet-name>
+  <servlet-class>controller.DocumentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>document</servlet-name>
+  <url-pattern>/document</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>author</servlet-name>
+  <servlet-class>controller.AuthorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>author</servlet-name>
+  <url-pattern>/author</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>chiefedtr</servlet-name>
+  <servlet-class>controller.ChiefEditorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>chiefedtr</servlet-name>
+  <url-pattern>/chiefedtr</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
+

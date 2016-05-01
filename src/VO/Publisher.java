@@ -2,6 +2,7 @@ package VO;
 
 public class Publisher {
 
+	private int id;
 	private String pubname;
 	private String pubaddrs;
 	
@@ -23,6 +24,16 @@ public class Publisher {
 
 	public void setPubaddrs(String pubaddrs) {
 		this.pubaddrs = pubaddrs;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 }

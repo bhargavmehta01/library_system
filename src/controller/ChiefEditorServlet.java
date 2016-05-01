@@ -24,6 +24,8 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
 			c1.setEname(request.getParameter("ename"));
 			
 			new ChiefEditorDAO().insert(c1);
+			
+			response.sendRedirect("insertCE.jsp");
 		}
 		
 	}

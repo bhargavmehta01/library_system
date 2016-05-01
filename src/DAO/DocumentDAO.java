@@ -28,7 +28,7 @@ public class DocumentDAO {
 		String query;
 		
 		
-		query = "Insert into document (title,PDate,publisherid) values ('" + d1.getTitle() + "','" + d1.getPubdate() + "','" + d1.getPubname() +"');";
+		query = "Insert into document (title,PDate,publisherid) values ('" + d1.getTitle() + "','" + d1.getPubdate() + "','" + d1.getPubid() +"');";
 		int rsx = statement.executeUpdate(query);
 
 

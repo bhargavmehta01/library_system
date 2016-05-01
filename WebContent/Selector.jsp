@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <style>
-a:link{
-    background-color: #B0C4DE;
-    color: white;
-    padding: 15px 25px;
-    text-align: center;	
+a:link
+{
+	background-color: #B0C4DE;
+    padding: 10px 20px;
     text-decoration: none;
+    color: initial;
     display: inline-block;
 }
-
 
 a:hover, a:active {
     background-color: #F4A460;
@@ -23,11 +22,12 @@ a:hover, a:active {
 </head>
 <body>
 
+
 <form align="center">
 <a href="insertReader.jsp">Reader</a>
 <a href="insertPublisher.jsp">Publisher</a>
-<a href="insertReader.jsp">Document</a>
-<a href="insertReader.jsp">Library</a>
+<a href="document?operation=load">Document</a>
+<a href="insertLibrary.jsp">Library</a>
 </form>
 
 </body>

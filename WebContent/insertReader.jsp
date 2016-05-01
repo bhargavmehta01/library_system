@@ -22,7 +22,7 @@
         </tr>
      	<tr>
         <td align="left">Type:</td>
-        <td align="center"><select>
+        <td align="center"><select name="rtype">
               <option value="student">Student</option>
               <option value="staff">Staff</option>
               <option value="senior citizen">Senior Citizen</option>

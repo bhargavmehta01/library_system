@@ -22,8 +22,10 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
 			Author a1 = new Author();
 			a1.setAuthname(request.getParameter("aname"));
 			
+			
 			new AuthorDAO().insert(a1);
 			
+			response.sendRedirect("insertAuthor.jsp");
 		}
 		
 	}
