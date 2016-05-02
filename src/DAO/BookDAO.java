@@ -27,7 +27,7 @@ public class BookDAO {
 			statement = connection.createStatement();
 			String query;
 
-			query = "Insert into book (aname) values ('" + a1.getAuthname() + "');";
+			query = "Insert into book (docid,isbn) values ('" + b1.getDocid() + "','" + b1.getIsbn() + "');";
 			int rsx = statement.executeUpdate(query);
 
 			statement.close();

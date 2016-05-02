@@ -28,6 +28,7 @@ a:hover, a:active {
 <a href="insertPublisher.jsp">Publisher</a>
 <a href="document?operation=load">Document</a>
 <a href="insertLibrary.jsp">Library</a>
+<a href="document?operation=searchAll">Search Documents</a>
 </form>
 
 </body>

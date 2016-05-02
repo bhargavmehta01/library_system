@@ -3,7 +3,7 @@ package VO;
 public class Book {
 
 	private int docid;
-	private int isbn;
+	private String isbn;
 	
 	public int getDocid() {
 		return docid;
@@ -13,12 +13,14 @@ public class Book {
 		this.docid = docid;
 	}
 
-	public int getIsbn() {
+	public String getIsbn() {
 		return isbn;
 	}
 
-	public void setIsbn(int isbn) {
+	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
+
+	
 	
 }
