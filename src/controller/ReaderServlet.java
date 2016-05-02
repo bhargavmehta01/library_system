@@ -25,6 +25,8 @@ public class ReaderServlet extends HttpServlet{
 			r1.setRtype(request.getParameter("rtype"));
 			
 			new ReaderDAO().insert(r1);
+			
+			response.sendRedirect("Selector.jsp");
 		}
 		
 	}

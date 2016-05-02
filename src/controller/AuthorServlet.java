@@ -25,7 +25,8 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
 			
 			new AuthorDAO().insert(a1);
 			
-			response.sendRedirect("insertAuthor.jsp");
+			response.sendRedirect("Selector.jsp");
+			
 		}
 		
 	}

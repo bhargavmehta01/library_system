@@ -25,6 +25,8 @@ public class PublisherServlet extends HttpServlet{
 			
 			new PublisherDAO().insert(p1);
 			
+			response.sendRedirect("Selector.jsp");
+			
 		}
 		
 	}

@@ -25,7 +25,7 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
 			
 			new ChiefEditorDAO().insert(c1);
 			
-			response.sendRedirect("insertCE.jsp");
+			response.sendRedirect("Selector.jsp");
 		}
 		
 	}

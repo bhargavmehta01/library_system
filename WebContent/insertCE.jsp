@@ -13,7 +13,7 @@
 	<table align="center">
 	<tr>
         <td align="center">Editor name:</td>
-        <td align="center"><input type="text" name="aname"></td>
+        <td align="center"><input type="text" name="ename"></td>
     </tr>
     <tr>
     <input type="hidden" name="operation" value="insert">

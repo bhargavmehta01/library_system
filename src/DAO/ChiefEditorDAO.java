@@ -2,11 +2,12 @@ package DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import VO.ChiefEditor;
-
 
 public class ChiefEditorDAO {
 
@@ -15,44 +16,95 @@ public class ChiefEditorDAO {
 
 	static final String USER = "root";
 	static final String PASS = "root";
-	
+
 	public void insert(ChiefEditor c1) {
-		
+
 		Connection connection = null;
 		Statement statement = null;
 		try {
-			
+
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(DB_URL, USER, PASS);
 			statement = connection.createStatement();
-		String query;
-		
-		
-		query = "Insert into chiefeditor (ename) values ('" + c1.getEname()  +"');";
-		int rsx = statement.executeUpdate(query);
-		
-		statement.close();
-		connection.close();
-	} catch (SQLException se) {
-		se.printStackTrace();
-	} catch (Exception e) {
-		e.printStackTrace();
-	} finally {
+			String query;
 
-		try {
-			if (statement != null)
-				statement.close();
+			query = "Insert into chiefeditor (ename) values ('" + c1.getEname() + "');";
+			int rsx = statement.executeUpdate(query);
+
+			statement.close();
+			connection.close();
 		} catch (SQLException se) {
 			se.printStackTrace();
-		}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
 
-		try {
-			if (connection != null)
-				connection.close();
-		} catch (SQLException se) {
-			se.printStackTrace();
+			try {
+				if (statement != null)
+					statement.close();
+			} catch (SQLException se) {
+				se.printStackTrace();
+			}
+
+			try {
+				if (connection != null)
+					connection.close();
+			} catch (SQLException se) {
+				se.printStackTrace();
+			}
 		}
 	}
-}
-	
+
+	public ArrayList<ChiefEditor> search() {
+
+		Connection connection = null;
+		Statement statement = null;
+		ArrayList<ChiefEditor> list = new ArrayList<>();
+		try {
+
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection(DB_URL, USER, PASS);
+			statement = connection.createStatement();
+			String query = "Select editorid, ename from chiefeditor";
+			ResultSet rs = statement.executeQuery(query);
+
+			while (rs.next()) {
+
+				int id = rs.getInt("editorid");
+				String name = rs.getString("ename");
+
+				ChiefEditor a = new ChiefEditor();
+				a.setEid(id);
+				a.setEname(name);
+
+				list.add(a);
+
+			}
+			rs.close();
+			statement.close();
+			connection.close();
+
+		} catch (SQLException se) {
+			se.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+
+			try {
+				if (statement != null)
+					statement.close();
+			} catch (SQLException se) {
+				se.printStackTrace();
+			}
+
+			try {
+				if (connection != null)
+					connection.close();
+			} catch (SQLException se) {
+				se.printStackTrace();
+			}
+		}
+		return list;
+	}
+
 }
