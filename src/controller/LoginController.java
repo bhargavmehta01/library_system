@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.AdminDAO;
+import DAO.ReaderDAO;
 
 public class LoginController extends HttpServlet{
 
@@ -22,6 +23,13 @@ public class LoginController extends HttpServlet{
 			//System.out.println(new AdminDAO().search(id,pass ));
 			if(new AdminDAO().search(id,pass )){
 				response.sendRedirect("Selector.jsp");
+			}
+		}
+		
+		if(auth.equals("reader")){
+			//System.out.println(new AdminDAO().search(id,pass ));
+			if(new ReaderDAO().search(id)){
+				response.sendRedirect("readerSelector.jsp");
 			}
 		}
 		//System.out.println(request.getParameter("auth"));
