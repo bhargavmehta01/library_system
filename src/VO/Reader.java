@@ -2,6 +2,7 @@ package VO;
 
 public class Reader {
 
+	private int id;
 	private String rtype;
 	private String fname;
 	private String addrs;
@@ -28,6 +29,14 @@ public class Reader {
 
 	public void setAddrs(String addrs) {
 		this.addrs = addrs;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }

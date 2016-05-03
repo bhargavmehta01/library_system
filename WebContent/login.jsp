@@ -14,14 +14,9 @@
 <table  align="center">
    		
         <tr>
-            <td align="center">Username:</td>
+            <td align="center">Card No:</td>
          	<td align="center"><input type="text" name="uname"></td>
         </br>
-        <tr>
-        	<td align="center">Password:</td>
-        	<td align="center"><input type="password" name="pswd"><br></td>
-        </tr>
-        	</br>
         <tr>
         	<td align="center"></td>
             <input type="hidden" name="auth" value="reader">

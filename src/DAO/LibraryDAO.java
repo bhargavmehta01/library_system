@@ -7,16 +7,18 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import VO.Reader;
+import VO.Author;
+import VO.Library;
 
-public class ReaderDAO {
+public class LibraryDAO {
+	
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 	static final String DB_URL = "jdbc:mysql://localhost/librarysystem";
 
 	static final String USER = "root";
 	static final String PASS = "root";
 
-	public void insert(Reader r1) {
+	public void insert(Library l) {
 
 		Connection connection = null;
 		Statement statement = null;
@@ -27,8 +29,7 @@ public class ReaderDAO {
 			statement = connection.createStatement();
 			String query;
 
-			query = "Insert into reader (rname,address,rtype) values ('" + r1.getFname() + "','" + r1.getAddrs() + "','"
-					+ r1.getRtype() + "');";
+			query = "Insert into branch (lname,location) values ('" + l.getName() + "','" + l.getLocation() + "');";
 			int rsx = statement.executeUpdate(query);
 
 			statement.close();
@@ -55,24 +56,30 @@ public class ReaderDAO {
 		}
 	}
 	
-	public boolean search(int id) {
+	public ArrayList<Library> search() {
 		
 		Connection connection = null;
 		Statement statement = null;
-		boolean flag=false;
+		ArrayList<Library> list = new ArrayList<>();
 		try {
 			
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(DB_URL, USER, PASS);
 			statement = connection.createStatement();
-			String query = "Select * from reader where readerid ='"+id+"'";
+			String query = "Select libid, lname from branch";
 			ResultSet rs = statement.executeQuery(query);
 
 			while (rs.next()) {
 				
-				String column = rs.getString("rname");
-				System.out.println(column);
- 				flag=true;
+				int id = rs.getInt("libid");
+				String name = rs.getString("lname");
+
+				Library l = new Library();
+				l.setId(id);
+				l.setName(name);
+				
+				list.add(l);
+
 				
 			}
 			rs.close();
@@ -99,7 +106,7 @@ public class ReaderDAO {
 				se.printStackTrace();
 			}
 		}
-		return flag;
+		return list;
 	}
 
 }

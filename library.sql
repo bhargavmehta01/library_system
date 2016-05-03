@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `librarysystem` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `librarysystem`;
 -- MySQL dump 10.13  Distrib 5.7.9, for osx10.9 (x86_64)
 --
 -- Host: localhost    Database: librarysystem
@@ -157,7 +159,7 @@ CREATE TABLE `branch` (
   `lname` varchar(30) NOT NULL,
   `location` varchar(100) NOT NULL,
   PRIMARY KEY (`libid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -166,6 +168,7 @@ CREATE TABLE `branch` (
 
 LOCK TABLES `branch` WRITE;
 /*!40000 ALTER TABLE `branch` DISABLE KEYS */;
+INSERT INTO `branch` VALUES (2,'lib2','paldi'),(3,'lib3','Jersey City');
 /*!40000 ALTER TABLE `branch` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -218,6 +221,7 @@ CREATE TABLE `copy` (
 
 LOCK TABLES `copy` WRITE;
 /*!40000 ALTER TABLE `copy` DISABLE KEYS */;
+INSERT INTO `copy` VALUES (1,1,2,'lkjhgf');
 /*!40000 ALTER TABLE `copy` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -444,4 +448,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-03 12:30:21
+-- Dump completed on 2016-05-03 14:23:17

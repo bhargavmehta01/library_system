@@ -41,7 +41,6 @@ $(document).ready(function() {
 			<th>Publisher Id</th>
 			<th>Publish Date</th>
 			<th></th>
-			<th></th>
 		</tr>
 	</thead>
 	
@@ -59,8 +58,7 @@ ArrayList<Document> arr= (ArrayList<Document>)session.getAttribute("docarr");
 <td><%=d.getTitle() %></td>
 <td><%=d.getPubid() %></td>
 <td><%=d.getPubdate() %></td>
-<td><a href="document?operation=delete&id=<%=d.getDocid() %>">Borrow</a></td>
-<td><a href="document?operation=update&id=<%=d.getDocid() %>">Reserve</a></td>	
+<td><a href="copy?operation=fetch&id=<%=d.getDocid() %>&title=<%=d.getTitle() %>">Get Details</a></td>
 </tr>	
 <% 
 	}
