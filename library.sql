@@ -136,7 +136,7 @@ CREATE TABLE `borrows` (
   KEY `copyfk2` (`docid`,`copyno`,`libid`),
   CONSTRAINT `copyfk2` FOREIGN KEY (`docid`, `copyno`, `libid`) REFERENCES `copy` (`docid`, `copyno`, `libid`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `readeridfk2` FOREIGN KEY (`readerid`) REFERENCES `reader` (`readerid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -145,6 +145,7 @@ CREATE TABLE `borrows` (
 
 LOCK TABLES `borrows` WRITE;
 /*!40000 ALTER TABLE `borrows` DISABLE KEYS */;
+INSERT INTO `borrows` VALUES (7,1,16,5,3,'2016-05-03 22:00:57','1994-05-04 04:00:00');
 /*!40000 ALTER TABLE `borrows` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -398,7 +399,7 @@ CREATE TABLE `reader` (
   `rname` varchar(20) NOT NULL,
   `address` varchar(100) NOT NULL,
   PRIMARY KEY (`readerid`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -407,7 +408,7 @@ CREATE TABLE `reader` (
 
 LOCK TABLES `reader` WRITE;
 /*!40000 ALTER TABLE `reader` DISABLE KEYS */;
-INSERT INTO `reader` VALUES (1,'student','sid','822 Pavonia Ave'),(3,'null','jf','jghjh'),(4,'student','dj','kjbj');
+INSERT INTO `reader` VALUES (1,'student','sid','822 Pavonia Ave'),(5,'student','bhargav','harrison'),(6,'senior citizen','chris','new york'),(7,'student','jatin','edison'),(8,'staff','johnathon','jersey city'),(9,'staff','erik','hoboken'),(10,'staff','lensher','new york');
 /*!40000 ALTER TABLE `reader` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -451,4 +452,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-03 17:49:10
+-- Dump completed on 2016-05-03 18:02:07
