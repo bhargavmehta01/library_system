@@ -24,6 +24,8 @@ a:hover, a:active {
 
 <form align="center">
 <a href="document?operation=searchAllforR">Search Documents</a>
+<a href="copy?operation=searchB">Search Borrowed Items</a>
+<a href="copy?operation=searchR">Search Reserved Items</a>
 </form>
 
 
