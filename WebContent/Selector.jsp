@@ -30,6 +30,7 @@ a:hover, a:active {
 <a href="insertLibrary.jsp">Library</a>
 <a href="copy?operation=load">Copy</a>
 <a href="document?operation=searchAll">Search Documents</a>
+<a href="frequency?operation=load">Top 10</a>
 </form>
 
 </body>

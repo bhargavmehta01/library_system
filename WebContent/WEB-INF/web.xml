@@ -84,6 +84,15 @@
 		<servlet-name>library</servlet-name>
 		<url-pattern>/library</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>frequency</servlet-name>
+		<servlet-class>controller.FrequencyControler</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>frequency</servlet-name>
+		<url-pattern>/frequency</url-pattern>
+	</servlet-mapping>
 
 </web-app>
 
